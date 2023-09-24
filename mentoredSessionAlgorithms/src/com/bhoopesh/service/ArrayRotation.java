@@ -1,19 +1,22 @@
 package com.bhoopesh.service;
 
 public class ArrayRotation {
+
+	public void leftRotate(int[] array, int midElement, int length) {
 	
-	/* Function to left rotate array[] of length "size" by element elem */
-	public void leftRotate(int array[], int elem, int size) {
-		for (int i = 0; i < elem-1; i++)
-			leftRotatebyOne(array, size);
+		for(int i = 0; i < midElement; i++)
+			leftRotateByOne(array, length);
+		
 	}
 
-	void leftRotatebyOne(int array[], int size) {
-		int i, temp;
+	private void leftRotateByOne(int[] array, int length) {
+		int i , temp;
 		temp = array[0];
-		for (i = 0; i < size - 1; i++)
-			array[i] = array[i + 1];
-		array[size - 1] = temp;
+		for(i = 0; i < length - 1; i++)
+			array[i] = array[i+1];
+		
+		array[length- 1] = temp;
+		
 	}
 
 }
