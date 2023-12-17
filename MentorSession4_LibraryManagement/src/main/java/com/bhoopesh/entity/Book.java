@@ -1,4 +1,4 @@
-package com.gl.entity;
+package com.bhoopesh.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,37 +8,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "book")
+@Table(name="book")
 public class Book {
 
-	// define fields
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private int id;
-
-	@Column(name = "title")
+	
+	@Column(name="title")
 	private String title;
-
-	@Column(name = "author")
+	
 	private String author;
-
-	@Column(name = "category")
+	
 	private String category;
 
 	public Book() {
-
+		
 	}
-
 	public Book(int id, String title, String author, String category) {
 		this.id = id;
-		this.title = title;
-		this.author = author;
-		this.category = category;
-	}
-
-	public Book(String title, String author, String category) {
 		this.title = title;
 		this.author = author;
 		this.category = category;
@@ -75,5 +63,4 @@ public class Book {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
 }
