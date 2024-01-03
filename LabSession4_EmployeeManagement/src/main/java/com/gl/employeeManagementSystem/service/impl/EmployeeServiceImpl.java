@@ -2,6 +2,7 @@ package com.gl.employeeManagementSystem.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gl.employeeManagementSystem.entity.Employee;
@@ -11,11 +12,8 @@ import com.gl.employeeManagementSystem.service.EmployeeService;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
+	@Autowired
 	private EmployeeRepository employeeRepository;
-
-	public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
-		this.employeeRepository = employeeRepository;
-	}
 
 	@Override
 	public List<Employee> getAllEmployees() {

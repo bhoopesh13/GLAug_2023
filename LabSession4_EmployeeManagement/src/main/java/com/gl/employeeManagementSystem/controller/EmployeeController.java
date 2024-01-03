@@ -1,5 +1,6 @@
 package com.gl.employeeManagementSystem.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,12 +14,8 @@ import com.gl.employeeManagementSystem.service.EmployeeService;
 @Controller
 public class EmployeeController {
 
+	@Autowired
 	private EmployeeService employeeService;
-
-	public EmployeeController(EmployeeService employeeService) {
-		super();
-		this.employeeService = employeeService;
-	}
 
 	// handler method to handle list employees and return mode and view
 	@GetMapping("/employees")
