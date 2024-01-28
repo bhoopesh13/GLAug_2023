@@ -2,8 +2,6 @@ package com.greatLearning.studentManagement.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.greatLearning.studentManagement.entity.Student;
 
 
